@@ -1,0 +1,458 @@
+/* Core Styling Reset & Elegant Background Color Palette */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050b14;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Premium Gradient Ambient Lighting Glow Effects */
+.bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(5, 11, 20, 0) 70%);
+    top: -10%;
+    right: -10%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Main Container Frame expanded to fit 3 panels neatly */
+.flyer-container {
+    width: 95%;
+    max-width: 1150px;
+    background: linear-gradient(135deg, #071120 0%, #03070d 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    padding: 40px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Typography Layout Rules */
+.brand-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    padding-bottom: 20px;
+}
+
+.crown-logo {
+    font-size: 24px;
+    margin-bottom: -5px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.brand-title {
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #d4af37;
+    background: linear-gradient(to right, #f3e7c4 0%, #d4af37 50%, #aa7c11 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-subtitle {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #a4b3c6;
+    margin-top: -2px;
+}
+
+.designer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.designer-title span {
+    color: #d4af37;
+    font-weight: 600;
+}
+
+.tagline {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a4b3c6;
+    margin-top: 8px;
+}
+
+/* Updated 3-Column Asymmetrical Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 0.9fr;
+    gap: 25px;
+    margin-bottom: 40px;
+    align-items: stretch;
+}
+
+/* Responsive breakpoint scaling layout for smaller display fields */
+@media (max-width: 992px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .model-profile-panel {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .model-profile-panel {
+        grid-column: span 1;
+    }
+}
+
+/* Glassmorphism Panel: Services Info Styling */
+.services-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.services-panel h3 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.services-list {
+    list-style: none;
+}
+
+.services-list li {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.services-list li:hover {
+    transform: translateX(5px);
+    color: #d4af37;
+}
+
+.gold-check {
+    color: #d4af37;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.badge {
+    text-align: center;
+    background: linear-gradient(90deg, #aa7c11, #d4af37);
+    color: #050b14;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+/* High-End Visual Showcase Grid Setup */
+./* High-End Visual Showcase Grid Setup */
+.gallery-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Slightly increased gap for spacing */
+}
+
+.gallery-item {
+  height: 260px; /* Increased from 180px to make photos bigger */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(1.05) contrast(1.05);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  border-color: #d4af37;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales to cover the box without distortion */
+    object-position: center;
+    display: block;
+    filter: brightness(1.05) contrast(1.05);
+    transition: transform 0.4s ease;
+}
+
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Softer overlay so it doesn't dim the photo too much */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 11, 20, 0.8) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  opacity: 0.75; /* Lighter default state */
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 0.95;
+  background: linear-gradient(to top, rgba(5, 11, 20, 0.9) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+}
+ 
+}
+
+/* Background fabric color definitions mapping original visual layout aesthetics */
+.item-1 { background: #372a54; } 
+.item-2 { background: #4a0e17; } 
+.item-3 { background: #1c152b; } 
+.item-4 { background: #335043; } 
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    border-color: #d4af37;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 12px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f3e7c4;
+}
+
+.quote-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.script-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #d4af37;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* NEW: Style configuration for the large side Photo Space Container */
+.model-profile-panel {
+    display: flex;
+    align-items: stretch;
+}
+
+.main-photo-frame {
+    width: 100%;
+    min-height: 320px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #09172c 0%, #040a12 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glowing gold border highlight effect upon hover over the main photo panel */
+.main-photo-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: linear-gradient(120deg, transparent, rgba(212, 175, 55, 0.4), transparent) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0.5;
+    transition: opacity 0.8s ease;
+}
+
+.main-photo-frame:hover::before {
+    opacity: 1;
+}
+
+.featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0; /* Default invisible until you assign a valid 'src' asset file path */
+}
+
+/* If a valid image path is provided, it covers placeholder automatically */
+.featured-image[src*="."] {
+    opacity: 1;
+}
+
+.photo-placeholder-text {
+    text-align: center;
+    color: rgba(212, 175, 55, 0.4);
+    z-index: 1;
+}
+
+.photo-placeholder-text span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.photo-placeholder-text p {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Premium Booking Footer Action Panel Layout */
+.booking-footer {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 14px 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #aa7c11, #d4af37);
+    color: #050b14;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+}
+
+.contact-details {
+    margin-bottom: 20px;
+}
+
+.contact-details .phones {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #e2e8f0;
+    margin-bottom: 6px;
+}
+
+.contact-details .instagram a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.contact-details .instagram a:hover {
+    color: #ffffff;
+}
+
+.contact-details .tictok a:hover{
+    color:#d4af37;
+    text-decoration: none;
+    font: size 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-tag {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+/* Soft Crown Floating Keyframe Animation Loop */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
